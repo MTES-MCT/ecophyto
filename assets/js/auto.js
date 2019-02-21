@@ -4,7 +4,10 @@ $(document).ready(function() {
     return new Date(year, month - 1, day);
   }
 
-
+  $('.overlay').visibility({
+	type: 'fixed',
+	offset: 80
+  });
 
   function formattedDate(d = new Date) {
     let month = String(d.getMonth() + 1);
@@ -28,7 +31,7 @@ $(document).ready(function() {
   $.each(mydata, function(key, data) {
     $.each(filteringDataKeys, function(item, key) {
       filteringData[key].push(data[key]);
-      filteringData[key].sort();
+      //filteringData[key].sort();
     })
   })
   $.each(filteringData, function(key, data) {
@@ -37,7 +40,7 @@ $(document).ready(function() {
     });
     filteringData[key].sort();
   })
-  var template = $('#template').html();
+  template = $('#template').html();
   Mustache.parse(template); // optional, speeds up future uses
   var rendered = Mustache.render(template, filteringData);
   $('#target').html(rendered);
@@ -52,6 +55,7 @@ $(document).ready(function() {
   FJS.addCriteria({ field: 'ETAT',  ele: '#etat_criteria input:checkbox' });
 
   FJS.filter();
+  //console.log(filteringData);
   window.FJS = FJS;
 });
 
