@@ -98,7 +98,7 @@
 				<div class="ui segment">
 				  <div class="ui horizontal labels">Mots-clefs :
 					  <% var mywords=MOTSCLEFS.split(';') ; for (index=0;index<mywords.length;++index) { %>
-					  <a class="ui label" href="#" onclick="javascript:document.getElementById('searchbox').focus();searchbox.value='<%= mywords[index] %>';FJS.filter();"><%= mywords[index] %></a>
+					  <a class="ui label tiny" href="#" onclick="javascript:document.getElementById('searchbox').focus();searchbox.value='<%= mywords[index] %>';FJS.filter();"><%= mywords[index] %></a>
 					  <% } %>
 					</div>
 				</div>
