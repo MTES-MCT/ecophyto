@@ -73,10 +73,11 @@
             <div class="ui segment">
               <p>Programme / appel / action : <%= PROGRAMME %></p>
               <p>Organisme porteur : <%= ORGANISME %></p>
-              <p>Partenaires : 
+              <% if(PARTENAIRES) { %><p>Partenaires : 
 			  		  <% var mywords=PARTENAIRES.split(',') ; for (index=0;index<mywords.length;++index) { %>
 					  <a class="ui label tiny" href="#" onclick="javascript:document.getElementById('searchbox').focus();searchbox.value='<%= mywords[index] %>';FJS.filter();"><%= mywords[index] %></a>
 					  <% } %></p>
+				<% } %>
             </div>
           </div>
         </div>
