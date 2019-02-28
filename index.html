@@ -15,7 +15,7 @@
   <script src="./data/bdphyto.js" type="text/javascript"></script>
   <script src="./assets/js/auto.js" type="text/javascript"></script>
 
-  <title>#EcoPhyto - Projets de recherche Pesticides</title>
+  <title>#EcoPhyto - Pesticides - Projets de recherche</title>
 </head>
 <body>
   <div class="ui hidden divider"></div>
@@ -24,8 +24,8 @@
       <div class="two wide column"><img class="ui image" src="assets/img/logo_marianne.svg" alt="Logo Ministère" width='100pt'></div>
 	  <div class="two wide column"><img class="ui image" src="assets/img/ecophyto_logo.png" alt="Logo Ecophyto" width='200pt'></div>
       <div class="ten wide column centered">
-        <div class="titre">Projets de recherche Pesticides</div>
-        <div class="label">Financés aux niveaux national et européen depuis 2009. Base réalisée par le service de la recherche du <a href="http://www.developpement-durable.gouv.fr/" target="_blank">ministère de la Transition écologique et solidaire</a> avec l'appui des ministères en charge de l'agriculture, la santé et la recherche. Contact : <a href="mailto:ecophyto-recherche@developpement-durable.gouv.fr"><i class="mail icon"></i></a></div>
+        <div class="titre">Pesticides - Projets de recherche</div>
+        <div class="label">Projets financés aux niveaux national et européen depuis 2009.<br/>Base réalisée par le service de la recherche du <a href="http://www.developpement-durable.gouv.fr/" target="_blank">ministère de la Transition écologique et solidaire</a> avec l'appui des ministères en charge de l'agriculture, la santé et la recherche.<br/>Contact : <a href="mailto:ecophyto-recherche@developpement-durable.gouv.fr"><i class="mail icon"></i></a></div>
       </div>
     </div>
 	
@@ -65,14 +65,18 @@
   <script id="data-template" type="text/html">
     <div class="ui raised segment">
       <p class="ui blue ribbon label"><%= SIGLE %></p>
-      <p><%= TITRE %></p>
+	  <span><b><%= TITRE %></b></span>
+	  <p></p>
       <div class="ui two column grid">
         <div class="column">
           <div class="ui segments">
             <div class="ui segment">
               <p>Programme / appel / action : <%= PROGRAMME %></p>
               <p>Organisme porteur : <%= ORGANISME %></p>
-              <p>Partenaires : <%= PARTENAIRES %></p>
+              <p>Partenaires : 
+			  		  <% var mywords=PARTENAIRES.split(',') ; for (index=0;index<mywords.length;++index) { %>
+					  <a class="ui label tiny" href="#" onclick="javascript:document.getElementById('searchbox').focus();searchbox.value='<%= mywords[index] %>';FJS.filter();"><%= mywords[index] %></a>
+					  <% } %></p>
             </div>
           </div>
         </div>
@@ -100,7 +104,8 @@
 			</div>
 		</div>
         <div class="ui container">
-          <p><%= linkify(RESUME) %></p><br />
+			<p></p>
+			<p><%= linkify(RESUME) %></p><br />
         </div>
       </div>
     </script>
