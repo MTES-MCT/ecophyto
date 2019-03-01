@@ -126,11 +126,9 @@
       <legend>Etat du projet</legend>
             <input type="checkbox" name="etat" value ="All" id="etat_all"><span><b> Tout</b></span>
       {{#ETAT}}{{#.}}
-      <div id="etat">
+      <div class="etat">
         <div class="checkbox" fjs-criteria="field=ETAT,ele=#etat input:checkbox">
-          <label>
-            &nbsp;&nbsp;<input type="checkbox" name="etat" value="{{.}}"><span> {{.}}</span>
-          </label>
+          <label>&nbsp;&nbsp;<input type="checkbox" name="etat" value="{{.}}"><span> {{.}}</span></label>
         </div>
       </div>
       {{/.}}{{/ETAT}}
@@ -142,13 +140,11 @@
   <div>
     <fieldset id="appel_criteria">
       <legend>Appel / action</legend>
-            <input type="checkbox" name="appel" value ="All" id="appel_all"><span><b> Tout</b>
+            <input type="checkbox" name="appel" value ="All" id="appel_all"><span><b> Tout</b></span>
       {{#APPEL}}{{#.}}
-      <div id="appel">
+      <div class="appel">
         <div class="checkbox" fjs-criteria="field=APPEL,ele=#appel input:checkbox">
-          <label>
-            &nbsp;&nbsp;<input type="checkbox" name="appel" value="{{.}}"><span> {{.}}</span>
-          </label>
+          <label>&nbsp;&nbsp;<input type="checkbox" name="appel" value="{{.}}"><span> {{.}}</span></label>
         </div>
       </div>
       {{/.}}{{/APPEL}}

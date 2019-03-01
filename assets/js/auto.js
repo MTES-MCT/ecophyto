@@ -64,9 +64,23 @@ function initSliders() {
   $('#etat_all').on('click', function(){
     $('#etat_criteria :checkbox').prop('checked', $(this).is(':checked'));
   });
+  $('#etat_criteria .etat :checkbox').on('click', function(){
+	var all_checked = true ;
+	$('#etat_criteria .etat :checkbox').each(function () { 
+		all_checked = all_checked && $(this).is(':checked') ;
+    });
+	$('#etat_all:checkbox').prop('checked', all_checked);
+  });
   $('#appel_criteria :checkbox').prop('checked', true);
   $('#appel_all').on('click', function(){
     $('#appel_criteria :checkbox').prop('checked', $(this).is(':checked'));
+    });
+  $('#appel_criteria .appel :checkbox').on('click', function(){
+	var all_checked = true ;
+	$('#appel_criteria .appel :checkbox').each(function () { 
+		all_checked = all_checked && $(this).is(':checked') ;
+    });
+	$('#appel_all:checkbox').prop('checked', all_checked);
   });
 }
 
