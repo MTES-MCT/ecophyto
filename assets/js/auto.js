@@ -99,7 +99,8 @@ function linkify(inputText) {
 }
 
 function toEuro(value) {
-  return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' ,  minimumFractionDigits: 0 }).format(value);
+  if (value ==  "") return "" ; else   
+  return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' ,  minimumFractionDigits: 0 }).format(value) ;
 }
   
 function qualcolor(val) {
