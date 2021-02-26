@@ -5,12 +5,12 @@ Pesticides - Projets de recherche
 # Journal
 
 26/02/2021
-*Mise à jour de l'intitulé ministère
-*Mise à jour du logo marianne
-*Mise à jour de l'inventaire
-*Ajout date de mise à jour
-*Correction champ "subvention2" dans index.html
-*Enregistrement DNS en CNAME
+* Mise à jour de l'intitulé ministère
+* Mise à jour du logo marianne
+* Mise à jour de l'inventaire
+* Ajout date de mise à jour
+* Correction champ "subvention2" dans index.html
+* Enregistrement DNS en CNAME
 
 
 
