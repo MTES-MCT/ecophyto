@@ -1,5 +1,5 @@
 var myurljson = "data/bdphyto.json" ;
-
+//var myurljson = "data/data.json" ;
 var mydata = (function () {
   var json = null;
   $.ajax({

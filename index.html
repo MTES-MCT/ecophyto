@@ -21,11 +21,12 @@
   <div class="ui hidden divider"></div>
   <div id="haut" class="ui container grid">
     <div class="row ui conteneurblue">
-      <div class="two wide column"><img class="ui image" src="assets/img/logo_marianne.svg" alt="Logo Ministère" width='100pt'></div>
+      <div class="two wide column"><img class="ui image" src="assets/img/logo_marianne.png" alt="Logo Ministère" width='100pt'></div>
 	  <div class="two wide column"><img class="ui image" src="assets/img/ecophyto_logo.png" alt="Logo Ecophyto" width='200pt'></div>
       <div class="ten wide column centered">
         <div class="titre">Pesticides - Projets de recherche</div>
-        <div class="label">Projets financés aux niveaux national et européen depuis 2009.<br/>Base réalisée par le service de la recherche du <a href="http://www.developpement-durable.gouv.fr/" target="_blank">ministère de la Transition écologique et solidaire</a> avec l'appui des ministères en charge de l'agriculture, la santé et la recherche.<br/>Contact : <a href="mailto:ecophyto-recherche@developpement-durable.gouv.fr"><i class="mail icon"></i></a></div>
+        <div class="label">Projets financés aux niveaux national et européen depuis 2009.<br/>Base réalisée par le service de la recherche du <a href="https://www.ecologie.gouv.fr/" target="_blank">ministère de la Transition écologique</a> avec l'appui des ministères en charge de l'agriculture, la santé et la recherche.<br/>Contact : <a href="mailto:ecophyto-recherche@developpement-durable.gouv.fr"><i class="mail icon"></i></a></div>
+        <div class="update">mise à jour : 26/02/2021</div> 
       </div>
     </div>
 	
@@ -56,7 +57,7 @@
     </div>
     <div class="row center aligned container">
       <div class="sixteen wide column">
-        <span class="text-muted small">© 2019 - Ministère de la Transition Ecologique et Solidaire</span>
+        <span class="text-muted small">© 2021 - Ministère de la Transition Ecologique</span>
       </div>
     </div>
   </body>
@@ -86,7 +87,7 @@
             <div class="ui segment">
               <p>Calendrier du projet : <%= ANNEE_DEBUT %> - <%= ANNEE_FIN %></p>
               <p>Subvention <%= FINANCEUR1 %> : <%= toEuro(SUBVENTION1) %></p>
-              <% if(FINANCEUR2) { %><p>Subvention <%= toEuro(FINANCEUR2) %> : <%= SUBVENTION2 %></p><% } %>
+              <% if(FINANCEUR2) { %><p>Subvention <%= (FINANCEUR2) %> : <%= toEuro(SUBVENTION2) %></p><% } %>
               <% if(COUTPROJET) { %><p>Coût du projet : <%= toEuro(COUTPROJET) %></p><% } %>
               <% if(RESULTATS) { %><p>Site du projet : <%= linkify(RESULTATS) %></p><% } %>
             </div>
